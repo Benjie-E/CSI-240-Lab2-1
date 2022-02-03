@@ -42,7 +42,7 @@ string Book::formatReportLine() {
 	stringstream buffer("");
 	buffer << getName() << " | Type: " << getTypeName() << " | Pages: " \
 			<< getPages() << " | Weight(lbs): " << getWeightLbs()\
-			<<"Average stars:"<< calculateAverageReview()<< "| Most frequent review: "<<getMostFrequentReview();
+			<<" | Average stars:"<< calculateAverageReview()<< " | Most frequent review: "<<getMostFrequentReview();
 	return buffer.str();
 }
 
@@ -77,7 +77,6 @@ float Book::calculateAverageReview() {
 		quantity+=bReviews[i];
 		total+=(bReviews[i])*(RATING_COUNT-i);
 	}
-	cout <<"total:"<<total<<"quantity:"<<quantity<<endl;
 	return total/quantity;
 }
 

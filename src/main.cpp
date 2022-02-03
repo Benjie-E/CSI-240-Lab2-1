@@ -49,7 +49,6 @@ int main()
 			newBook.addReviews(reviewFile);
 			//write out report line for movie here!
 			cout << newBook.formatReportLine() << endl;
-			cout << newBook.calculateAverageReview() << endl;
 		}
 	}
 	else
